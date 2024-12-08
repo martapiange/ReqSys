@@ -1,8 +1,40 @@
-<!--<div class="message">${message}</div> -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Ensures the body fills at least the screen height */
+    }
 
-<h1 style="text-align: center;">WELCOME BACK!</h1>
-<hr />
-<p>&nbsp;</p>
+    .content {
+      flex: 1; /* Makes the content take up the available space, pushing the banner down */
+    }
 
-<p><button type="button">log in</button></p>
+    .banner-container {
+      width: 100%; /* Full width */
+      background-color: #fff; /* Optional: match your design */
+    }
 
+    .banner {
+      width: 100%; /* Ensures the image spans the full width */
+      height: auto; /* Maintains the image's aspect ratio */
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="message">${message}</div>
+    <h1 style="text-align: center;">WELCOME BACK!</h1>
+    <p><button type="button">log in</button></p>
+  </div>
+
+  <!-- Banner Section -->
+  <div class="banner-container">
+    <img class="banner" src="./src/pictures/bannerUnifrAp.png" alt="Banner" />
+  </div>
+</body>
+</html>
