@@ -11,8 +11,8 @@
     }
 
     .content {
-      flex: 12; /* Makes the content take up the available space, pushing the banner down */
-      display: flex; /* Add flexbox to center content within */
+      flex: 12;
+      display: flex; 
       flex-direction: column;
       align-items: center; /* Horizontally center elements */
     }
@@ -26,7 +26,7 @@
 
     label {
       font-family: Arial, sans-serif; /* Use Arial font for labels */
-      font-size: 16px; /* Optional: Adjust label font size */
+      font-size: 16px; /*Adjust label font size */
       margin-bottom: 5px;
     }
 
@@ -39,13 +39,12 @@
       /* Styling for rectangular background */
       background-color: #da56ffbe; 
       padding: 20px; /* Space inside the rectangle */
-     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for depth */
-      width: 400px; /* Set fixed width */
+      width: 400px; /* fixed width */
     }
 
     .banner-container {
       width: 100%; 
-      background-color: #cb6ce6; /* Optional: match your design */
+      background-color: #cb6ce6; 
     }
 
     .banner {
@@ -60,11 +59,14 @@
     }
   </style>
 </head>
+
+
+
 <body>
   <div class="content">
     <div class="message">${message}</div>
     <h1>WELCOME BACK!</h1>
-    <p>&nbsp;</p>
+    
     <!-- Form Section -->
     <div class="form-container">
       <label for="username">Email:</label>
