@@ -1,90 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Web Page</title>
-  <style>
-    body {
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh; /* Ensures the body fills at least the screen height */
-    }
-
-    .content {
-      flex: 12;
-      display: flex; 
-      flex-direction: column;
-      align-items: center; /* Horizontally center elements */
-    }
-
-
-    h1 {
-      text-align: center; /* Center the text */
-      font-family: Arial, sans-serif; /* Use Arial font */
-      font-size: 48px; /* Set the font size to make it bigger */
-    }
-
-    label {
-      font-family: Arial, sans-serif; /* Use Arial font for labels */
-      font-size: 16px; /*Adjust label font size */
-      margin-bottom: 5px;
-    }
-
-    .form-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-
-      /* Styling for rectangular background */
-      background-color: #da56ffbe; 
-      padding: 20px; /* Space inside the rectangle */
-      width: 400px; /* fixed width */
-    }
-
-    .banner-container {
-      width: 100%; 
-      background-color: #cb6ce6; 
-    }
-
-    .banner {
-      width: 100%; /* Ensures the image spans the full width */
-      height: auto; /* Maintains the image's aspect ratio */
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-
-
-
-<body>
+<template>
   <div class="content">
-    <div class="message">${message}</div>
     <h1>WELCOME BACK!</h1>
-    
+
     <!-- Form Section -->
     <div class="form-container">
-      <label for="username">Email:</label>
-      <input type="text" id="username" name="username" placeholder="Enter your unifr email">
-      <p>&nbsp;</p>
+      <label for="email">Email:</label>
+      <input type="text" id="email" value.bind="email" placeholder="Enter your unifr email" />
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" placeholder="Enter your password">
-      <p>&nbsp;</p>
-      <button type="submit">Log In</button>
+      <input type="password" id="password" value.bind="password" placeholder="Enter your password" />
+      <button click.delegate="login()">Log In</button>
+      <p id="errorMessage" if.bind="errorMessage">${errorMessage}</p>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p><p>&nbsp;</p>
   </div>
 
   <!-- Banner Section -->
   <div class="banner-container">
     <img class="banner" src="./src/pictures/bannerUnifrAp.png" alt="Banner" />
-
   </div>
-</body>
-</html>
+</template>
