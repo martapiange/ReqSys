@@ -1,6 +1,8 @@
-.message {
-  background-color: lightblue;
+.active {
+  font-weight: bold;
 }
 
-
-/* for the moment, the little css present in the page is integrated in the html*/
+a {
+  color: #000;
+  text-decoration: none;
+}
