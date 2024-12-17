@@ -1,39 +1,127 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="home.css">
-  </head>
-  <body>
-    <div class="app-container">
-      <header class="header">
-        <div class="user-info">
-          <div class="avatar">😊</div>
-          <div class="details">
-            <p class="faculty">faculty</p>
-            <p class="semester">semester of studies</p>
-            <a href="#" class="logout">log out</a>
-          </div>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage Design</title>
+        <style>
+            /* Reset Styles */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Body and Wrapper */
+            body {
+                background-color: #f9f9f9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
+    
+            .wrapper {
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: center;
+            }
+    
+            /* Header Section */
+            .header {
+                margin-bottom: 20px;
+                text-align: left;
+                padding: 10px 20px;
+            }
+    
+            .header span {
+                font-size: 24px;
+                display: block;
+            }
+    
+            .emoji {
+                font-size: 36px;
+            }
+    
+            .logout {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+                margin-top: 10px;
+                display: inline-block;
+            }
+    
+            /* Button Grid Section */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                margin: 30px 0;
+            }
+    
+            .button {
+                background-color: #e0e0e0;
+                padding: 20px;
+                border: none;
+                font-size: 18px;
+                color: #333;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+    
+            .button:hover {
+                background-color: #d0d0d0;
+            }
+    
+            /* Footer Section */
+            .footer {
+                background-color: #0079a1;
+                color: white;
+                padding: 20px;
+            }
+    
+            .footer p {
+                margin: 0;
+                font-size: 16px;
+            }
+    
+            .footer span {
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Main Wrapper -->
+        <div class="wrapper">
+    
+            <!-- Header Section -->
+            <div class="header">
+                <span class="emoji">😊</span>
+                <span>faculty</span>
+                <span>semester of studies</span>
+                <a href="log-in-page.html" class="logout">log out</a>
+            </div>
+    
+            <!-- Button Grid Section -->
+            <div class="grid">
+                <a href="courses.html" style="text-decoration: none;">
+                    <button class="button">COURSES</button>
+                </a>
+                <button class="button">EXAMS & GRADES</button>
+                <button class="button">TODAY'S ACTIVITIES</button>
+                <button class="button">CERTIFICATES & FACTURES</button>
+                <button class="button">CAMPUS PLAN</button>
+                <button class="button">SETTINGS</button>
+            </div>
+    
+            <!-- Footer Section -->
+            <div class="footer">
+                <p>Need some help?</p>
+                <p>Our assistance is <span>there for you :)</span></p>
+            </div>
         </div>
-      </header>
-  
-      <main class="main-content">
-        <div class="grid">
-          <div class="grid-item">COURSES</div>
-          <div class="grid-item">EXAMS & GRADES</div>
-          <div class="grid-item">TODAY'S ACTIVITIES</div>
-          <div class="grid-item">CERTIFICATES & FACTURES</div>
-          <div class="grid-item">CAMPUS PLAN</div>
-          <div class="grid-item">SETTINGS</div>
-        </div>
-      </main>
-  
-      <footer class="footer">
-        <div class="help-box">
-          <p>Need some help?</p>
-          <a href="#">Our assistance is there for you :)</a>
-        </div>
-        <img class="branding" src="./src/pictures/bannerUnifrAp.png" alt="Banner" />
-      </footer>
-    </div>
-  </body>
-  
-</html>
+    </body>
+    </html> 
