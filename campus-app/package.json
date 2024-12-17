@@ -9,7 +9,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@aurelia/router": "latest",
-    "aurelia": "latest"
+    "aurelia": "latest",
+    "material-components-web": "^14.0.0"
   },
   "devDependencies": {
     "@aurelia/testing": "latest",

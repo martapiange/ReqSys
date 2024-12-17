@@ -5,9 +5,8 @@ import { HttpClient } from '@aurelia/fetch-client';
 
 
 
-@inject(IRouter) // Inject the router
+@inject(IRouter,HttpClient) // Inject the router
 export class LoginPage implements IRouteableComponent {
-   private http: HttpClient = new HttpClient();
 
    readonly router: IRouter = resolve(IRouter);
 
@@ -17,8 +16,8 @@ export class LoginPage implements IRouteableComponent {
   
    
     private storedCredentials = {
-      email1: 'giuseppe.impastato@unifr.ch',
-      password1: '1234510100passi!',
+      email1: 'name.lastname@unifr.ch',
+      password1: '1234',
       email2: 'pino.sergi@unifr.ch',
       password2: '7Ottobre!',
       email3: 'lucas.mosch@unifr.ch',

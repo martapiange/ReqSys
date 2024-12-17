@@ -5,13 +5,13 @@ import { HomePage } from "./home";
 export class MyApp {
   static routes = [
     {
-      path: '',
-      component: '',
+      path: [''],
+      component: LoginPage,
       title: 'LogIn',
     },
     {
       path: 'home',
-      component: '',
+      component: HomePage,
       title: 'Home',
     },
   
