@@ -43,6 +43,33 @@
         .course-card ul li {
             margin-bottom: 10px;
         }
+        .register-btn, .unregister-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-right: 10px;
+        }
+        .register-btn {
+            background-color: #28a745;
+        }
+        .register-btn:hover {
+            background-color: #218838;
+        }
+        .unregister-btn {
+            background-color: #dc3545;
+        }
+        .unregister-btn:hover {
+            background-color: #c82333;
+        }
+        .success-message {
+            color: green;
+            margin-top: 10px;
+            display: none;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -50,40 +77,81 @@
         <h1>My Courses</h1>
     </header>
     <div class="container">
+        <!-- Course 1 -->
         <div class="course-card">
             <h2>Requirements Engineering for Information Systems [AS 2024]</h2>
             <p>
-                The development of software, services, and IT infrastructure in an information system encompasses a wide range of methods and tools. In the initial development phases of software and systems projects, methods for determining requirements and the choice of software tools are primary concerns. This course covers these areas, setting a foundation for development projects.
+                The development of software, services, and IT infrastructure in an information system encompasses a wide range of methods and tools. This course covers the methods for determining requirements and choosing software tools.
             </p>
-            <p>
-                <strong>Format:</strong> Participants collaborate in teams of two along the first phases of a development project.
-            </p>
-            <ul>
-                <li>Methods for the elicitation, analysis, and specification of requirements</li>
-                <li>Agile practices such as Scrum product backlogs and Kanban boards</li>
-                <li>Software tools for collaboration in teams such as Git and development environments</li>
-                <li>Automation using continuous integration and DevOps tools and methods</li>
-                <li>Introduction to architectures using databases, services, and web technologies</li>
-            </ul>
             <p><strong>Teacher:</strong> Fabian Muff</p>
+            <!-- Register and Unregister Buttons -->
+            <button class="register-btn" onclick="registerCourse(this)">Register</button>
+            <button class="unregister-btn" onclick="unregisterCourse(this)" style="display: none;">Unregister</button>
+            <p class="success-message">You have successfully registered for this course!</p>
         </div>
+
+        <!-- Course 2 -->
         <div class="course-card">
             <h2>Advanced Data Analytics [AD 2024]</h2>
             <p>
-                This course explores advanced techniques and tools used in data analytics to gain actionable insights. It covers data preprocessing, visualization, predictive modeling, and the use of machine learning algorithms to analyze complex datasets.
+                This course explores advanced data analytics techniques, including machine learning, big data tools, and ethical considerations in data handling.
             </p>
-            <p>
-                <strong>Format:</strong> Hands-on projects and collaborative team exercises.
-            </p>
-            <ul>
-                <li>Data preprocessing and cleaning techniques</li>
-                <li>Exploratory Data Analysis (EDA) and visualization</li>
-                <li>Machine learning algorithms for predictive analytics</li>
-                <li>Big data tools and platforms</li>
-                <li>Ethics and privacy in data analytics</li>
-            </ul>
             <p><strong>Teacher:</strong> Dr. Jane Doe</p>
+            <!-- Register and Unregister Buttons -->
+            <button class="register-btn" onclick="registerCourse(this)">Register</button>
+            <button class="unregister-btn" onclick="unregisterCourse(this)" style="display: none;">Unregister</button>
+            <p class="success-message">You have successfully registered for this course!</p>
         </div>
     </div>
+
+    <script>
+        // Function to handle course registration
+        function registerCourse(button) {
+            const courseCard = button.parentElement; // Get the parent course card
+            const successMessage = courseCard.querySelector('.success-message'); // Success message
+            const unregisterBtn = courseCard.querySelector('.unregister-btn'); // Unregister button
+
+            // Show success message and unregister button
+            successMessage.style.display = 'block';
+            unregisterBtn.style.display = 'inline-block';
+
+            // Disable register button
+            button.disabled = true;
+            button.textContent = 'Registered';
+        }
+
+        // Function to handle course unregistration
+        function unregisterCourse(button) {
+            const courseCard = button.parentElement; // Get the parent course card
+            const successMessage = courseCard.querySelector('.success-message'); // Success message
+            const registerBtn = courseCard.querySelector('.register-btn'); // Register button
+
+            // Hide success message and unregister button
+            successMessage.style.display = 'none';
+            button.style.display = 'none';
+
+            // Enable register button
+            registerBtn.disabled = false;
+            registerBtn.textContent = 'Register';
+        }
+    </script>
+    <div style="margin: 20px;">
+        <button onclick="goBack()" style="
+            padding: 10px 20px; 
+            font-size: 16px; 
+            background-color: #004080; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;">
+            ← Back
+        </button>
+    </div>
+    
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 </html>
