@@ -27,7 +27,9 @@ export class LoginPage implements IRouteableComponent {
     // Handle login
     login() {
       if ((this.email === this.storedCredentials.email1 && this.password === this.storedCredentials.password1)||(this.email === this.storedCredentials.email2 && this.password === this.storedCredentials.password2)||(this.email === this.storedCredentials.email3 && this.password === this.storedCredentials.password3)) {
-        this.router.load('./home'); 
+        this.errorMessage = '';
+        window.location.href = './src/home.html';
+        this.router.load('./home');
 
       } else {
         this.errorMessage = 'Invalid email or password!';

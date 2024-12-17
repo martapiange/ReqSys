@@ -11,7 +11,7 @@ export class MyApp {
     },
     {
       path: 'home',
-      component: HomePage,
+      component: () => import('./home'),
       title: 'Home',
     },
   
